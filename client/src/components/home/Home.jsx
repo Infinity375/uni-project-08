@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import gamesAPI from "../../api/games-api";
-import LatestGame from "./latest-game/LatestGame";
+{/*import gamesAPI from "../../api/games-api";
+import LatestGame from "./latest-game/LatestGame";*/}
 
 
 export default function Home() {
