@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
+import productsAPI from "../../api/products-api";
 {/*import gamesAPI from "../../api/games-api";
 import LatestGame from "./latest-game/LatestGame";*/}
+import LatestProducts from "./latest-products/latestProducts";
 
 
 export default function Home() {
 
-    const [latestGames, setLatestGames] = useState([]);
+    const [latestProducts, setLatestProducts] = useState([]);
     useEffect(() => {
         (async () => {
             //TODO - 3 latest games
-            const result = await gamesAPI.getAll();
-            setLatestGames(result.reverse().slice(0,3));
+            const result = await productsAPI.getAll();
+            setLatestProducts(result.reverse().slice(0,3));
         })();
     }, []);
 
@@ -25,9 +27,9 @@ export default function Home() {
 
             <div id="home-page">
                 <h1>Latest Games</h1>
-                {latestGames.length > 0
-                    ? latestGames.map(game => <LatestGame key={game._id} {...game}/>)
-                    :<p className="no-articles">No games yet</p>
+                {latestProducts.length > 0
+                    ? latestProducts.map(product => <LatestProducts key={product._id} {...product}/>)
+                    :<p className="no-articles">No products yet</p>
                 }
 
 

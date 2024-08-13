@@ -15,13 +15,17 @@ export default function ProductListItem(
 
     return (
         <div className="allGames">
-            <div className="allGames-info">
-                <img src={imageUrl} />
-                <h6>{category}</h6>
-                <h2>{title}</h2>
-                <Link to={`/products/${_id}/details`} className="details-button">Details</Link>
+            <div className="product-box">
+                <div className="product">
+                    <div className="product-info">
+                        <h2>{title}</h2>
+                        <p>{shortDescription}</p>
+                    </div>
+                    <div className="product-image"><img src={imageUrl} /></div>
+                </div>
+                <Link to={`/products/${_id}/details`} className="details-button">See more</Link>
             </div>
-
         </div>
+
     )
 }

@@ -7,7 +7,7 @@ export default function ProductCatalog() {
 
     return (
         <section id="catalog-page">
-            <h1>All Games</h1>
+            <h1>All Products</h1>
 
             {products.length > 0
                 ? products.map(product => <ProductListItem key={product._id} {...product} />)

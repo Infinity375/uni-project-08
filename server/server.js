@@ -1343,11 +1343,11 @@
         products: {
             "69e10309-2a60-4913-acfc-eb81cb203e42": {
                 "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-                "title": "НОСИМА АНАЛОГОВА РАДИОСТАНЦИЯ HYTERA S1 MINI",
+                "title": "HAND-HELD ANALOG TRANSCEIVER HYTERA S1 MINI",
                 "manufacturer": "HYTERA",
-                "category": "Носими аналогови радиостанции",
-                "shortDescription": "Моделът S1 mini на Hytera е миниатюрно аналогово радио, което съчетава мода и комуникация както никога досега — първи по рода си дизайн, минималистичен стил, надеждна PTT услуга, превъзходно аудио, издръжлива батерия.",
-                "description": "Моделът S1 mini на Hytera е миниатюрно аналогово радио, идеално бизнес решение за ресторанти, книжарници, салони за красота и др. Той съчетава мода и комуникация както никога досега — първи по рода си дизайн, минималистичен стил, надеждна PTT услуга, превъзходно аудио, издръжлива батерия. Това радио ви помага да поддържате по-добра връзка с екипа си, като същевременно оставате фокусирани върху клиентите си.",
+                "category": "HAND-HELD ANALOG TRANSCEIVERS",
+                "shortDescription": "The Hytera model S1 mini is a tiny business-ready analog radio, which blends fashion and communication like never before — first-of-its-kind design, minimalist style, reliable PTT service, superb audio, long-lasting battery.",
+                "description": "The Hytera model S1 mini is a tiny business-ready analog radio ideal for restaurants, bookstores, beauty salons and more. It blends fashion and communication like never before — first-of-its-kind design, minimalist style, reliable PTT service, superb audio, long-lasting battery. This radio helps you stay better connected with your team while staying focused on your customers.",
                 "price": "750",
                 "imageUrl": "https://integra-a.com/wp-content/uploads/2024/07/integra-a.com-s1-mini-800-3.jpg",
                 "_createdOn": 1723492751687,

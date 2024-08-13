@@ -7,12 +7,12 @@ export const useLogin = () => {
 
     const loginHandler = async (email, password) => {
         const { password: _, ...authData } = await login(email, password);
+        console.log("Login authData:", authData);
         changeAuthState(authData);
         return authData;
     }
-
     return loginHandler;
-}
+};
 
 export const useRegister = () => {
     const { changeAuthState } = useAuthContext();
@@ -34,4 +34,4 @@ export const useLogout = () => {
     };
     
     return logoutHandler;
-} 
+};

@@ -22,12 +22,12 @@ export function AuthContextProvider(props) {
     };
 
     const contextData = {
-        userId: authState?.userId || '',
+        userId: authState?._id || '',
         email: authState?.email || '',
         accessToken: authState?.accessToken || '',
         isAuthenticate: !!authState?.email,
         changeAuthState,
-        logout
+        logout,
     };
     return (
         <AuthContext.Provider value={contextData}>
@@ -38,6 +38,6 @@ export function AuthContextProvider(props) {
 
 export function useAuthContext() {
     const authData = useContext(AuthContext);
-    
+
     return authData;
 }

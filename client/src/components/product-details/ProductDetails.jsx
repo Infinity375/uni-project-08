@@ -1,10 +1,11 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useGetOneProduct } from "../../hooks/useProducts";
-import { useAuthContext } from "../../contexts/AuthContext";
+import { AuthContext, useAuthContext } from "../../contexts/AuthContext";
 import { useCreateProductComment, useGetAllComments } from "../../hooks/useProductComments";
 import { useForm } from "../../hooks/useForm";
 import { Link } from "react-router-dom";
 import productsAPI from "../../api/products-api";
+import { useContext } from "react";
 
 const initialValues = {
     comment: '',
@@ -14,7 +15,7 @@ export default function ProductDetails() {
     const { productId } = useParams();
     const [product] = useGetOneProduct(productId);
     const navigate = useNavigate();
-    const { isAuthenticate, email } = useAuthContext();
+    const { isAuthenticate, email, userId } = useAuthContext();
     const createComment = useCreateProductComment();
     const [productComments, dispatch] = useGetAllComments(productId);
 
@@ -48,19 +49,22 @@ export default function ProductDetails() {
         return <p>Loading...</p>;
     }
 
+    const isOwner = userId === product._ownerId;
+
     return (
         <section id="game-details">
-            <h1>Game Details</h1>
+            <h1>Product Details</h1>
             <div className="info-section">
 
                 <div className="game-header">
                     <img className="game-img" src={product.imageUrl} alt={product.title} />
                     <h1>{product.title}</h1>
-                    <span className="levels">MaxLevel: {product.maxLevel}</span>
+                    <span className="levels">Manufacturer: {product.manufacturer}</span>
                     <p className="type">{product.category}</p>
+                    <h2>€ {product.price}</h2>
                 </div>
 
-                <p className="text">{product.summary}</p>
+                <p className="text">{product.description}</p>
 
                 <div className="details-comments">
                     <h2>Comments:</h2>
@@ -74,12 +78,14 @@ export default function ProductDetails() {
                     {productComments.length === 0 && (<p className="no-comment">No comments.</p>)}
                 </div>
 
-                <div className="buttons">
-                    <Link to={`/products/${productId}/edit`} className="button">Edit</Link>
-                    <a href="#" onClick={productDeleteHandler} className="button">Delete</a>
-                </div>
+                {isOwner && (
+                    <div className="buttons">
+                        <Link to={`/products/${productId}/edit`} className="button">Edit</Link>
+                        <a href="#" onClick={productDeleteHandler} className="button">Delete</a>
+                    </div>
+                )}
             </div>
-            
+
             {isAuthenticate && (
                 <article className="create-comment">
                     <label>Add new comment:</label>
