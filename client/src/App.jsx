@@ -12,6 +12,7 @@ import ProductDetails from './components/product-details/ProductDetails'
 import ProductCreate from './components/product-create/ProductCreate'
 import PostBlog from './components/posts/PostsBlog'
 import ProductEdit from './components/product-edit/ProductEdit'
+import PostDetails from './components/post-details/PostDetails'
 
 function App() {
   
@@ -30,6 +31,7 @@ function App() {
             <Route path='/products/:productId/edit' element={<ProductEdit />} />
             <Route path='/products/create' element={<ProductCreate />} />
             <Route path='/posts' element={<PostBlog/>}/>
+            <Route path='/posts/:postId/details' element={<PostDetails />} />
           </Routes>
         </main>
 
