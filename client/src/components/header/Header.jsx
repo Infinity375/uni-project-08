@@ -5,13 +5,14 @@ export default function Header() {
     const { isAuthenticate } = useAuthContext();
     return (
         <header>
-            <h1><Link className="home" to="/">GamesPlay</Link></h1>
+            <h1><Link className="home" to="/">TopRadio</Link></h1>
             <nav>
-                <Link to="/products">All games</Link>
+                <Link to="/products">All products</Link>
+                <Link to="/posts">Blog</Link>
                 {isAuthenticate
                     ? (
                         <div id="user">
-                            <Link to="/products/create">Create Game</Link>
+                            <Link to="/products/create">Create product</Link>
                             <Link to="/logout">Logout</Link>
                         </div>
                     )

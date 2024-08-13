@@ -1,6 +1,7 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "../../hooks/useForm"
-import { useCreateProduct } from "../../hooks/useProducts";
+import { useGetOneProduct } from "../../hooks/useProducts";
+import productsAPI from "../../api/products-api";
 
 const initialValues = {
     title: '',
@@ -12,28 +13,30 @@ const initialValues = {
     imageUrl: '',
 };
 
-export default function ProductCreate() {
+export default function ProductEdit() {
+    const { productId } = useParams();
     const navigate = useNavigate();
-    const createProduct = useCreateProduct();
-    const createHandler = async (values) => {
+    const [product, setProduct] = useGetOneProduct(productId);
+    const {
+        changeHandler,
+        submitHandler,
+        values,
+    } = useForm(Object.assign(initialValues, product), async (values) => {
         try {
-            const { _id: productId } = await createProduct(values);
+            await productsAPI.update(productId, values);
             navigate(`/products/${productId}/details`);
         } catch (err) {
             console.log(err.message);
+
         }
-    }
-    const {
-        values,
-        changeHandler,
-        submitHandler
-    } = useForm(initialValues, createHandler);
+    });
+
     return (
-        <section id="create-page" className="auth">
-            <form id="create" onSubmit={submitHandler}>
+        <section id="edit-page" className="auth">
+            <form id="edit" onSubmit={submitHandler}>
                 <div className="container">
 
-                    <h1>Create Product</h1>
+                    <h1>Edit Product</h1>
                     <label htmlFor="leg-title">Title:</label>
                     <input
                         type="text"
@@ -94,7 +97,8 @@ export default function ProductCreate() {
                         onChange={changeHandler}
                         placeholder="Upload a photo..." />
 
-                    <input className="btn submit" type="submit" value="Create Product" />
+                    <input className="btn submit" type="submit" value="Edit Product" />
+
                 </div>
             </form>
         </section>

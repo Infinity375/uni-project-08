@@ -1352,6 +1352,18 @@
                 "imageUrl": "https://integra-a.com/wp-content/uploads/2024/07/integra-a.com-s1-mini-800-3.jpg",
                 "_createdOn": 1723492751687,
                 "_id": "69e10309-2a60-4913-acfc-eb81cb203e42"
+            },
+            "ac5228a4-88d0-473e-915f-17b5da2eeeb4": {
+                "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                "title": "FIXED-MOUNT AMATEUR TRANSCEIVER ICOM IC-905",
+                "manufacturer": "ICOM",
+                "category": "MOBILE / DESKTOP HF AMATEUR TRANSCEIVERS",
+                "shortDescription": "The IC-905 is a super-efficient microwave base station with the RF unit designed to be at the base of the antenna. This design eliminates signal loss due to costly, long coax feed line runs.",
+                "description": "Industry first multi-band 144 MHz to microwave All mode transceiver – 144, 430, 1200, 2400, 5600 MHz + 10 GHz* / SSB, CW, AM, FM, RTTY, D-STAR DV/DD, and FM-TV (Amateur TV)! The ICOM IC-905 is a super-efficient microwave base station with the RF unit designed to be at the base of the antenna. This design eliminates signal loss due to costly, long coax feed line runs.",
+                "price": "1500",
+                "imageUrl": "https://integra-a.com/wp-content/uploads/2024/06/integra-a-ic-905-1.jpg",
+                "_createdOn": 1723587873487,
+                "_id": "ac5228a4-88d0-473e-915f-17b5da2eeeb4"
             }
         },
         productComments: {
@@ -1362,6 +1374,18 @@
                 "_createdOn": 1723497635756,
                 "_id": "2cafa4f9-4dc0-436a-b5cd-2b72e669cb5d"
             }
+        },
+        posts: {
+            "e1576e6a-450e-4b75-84f9-ff1418bdc062": {
+                "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                "title": "New products information – ID-52E PLUS & 60th anniversary limited edition",
+                "shortDescription": "Icom Inc. is proud to introduce the ID-52E PLUS – VHF and UHF dual band amateur digital transceiver.",
+                "description": "Icom Inc. is proud to introduce the ID-52E PLUS – VHF and UHF dual band amateur digital transceiver. In celebration of Icom’s 60th anniversary, the manufacturer is also releasing a limited edition of the ID-52E PLUS at the same time. Launch schedule: ID-52E PLUS – autumn 2024, ID-52E PLUS 60th anniversary Limited edition – summer 2024. The ID-52E PLUS has upgraded functions from the ID-52E. Terminal mode and Access Point mode, which previously required a cable connection, can now connect to an Android™ device* via Bluetooth® technology. In addition, dual operation of Terminal mode and Simplex/Repeater operations is now possible. While operating in terminal mode, you can quickly respond by switching to regular RF operations. Moreover, the USB connection terminal has been changed from USB micro-B to more versatile USB Type-C™ port for improved worldwide standardized usability.The ID-52E PLUS 60th anniversary Limited edition will have a total limited production of only 2 400 units worldwide. It features a bright metallic-colored body and comes with an exclusive hand strap engraved with our 60th anniversary logo. It will also be delivered in a special packaging with the 60th anniversary logo.",
+                "imageUrl": "https://integra-a.com/wp-content/uploads/2024/07/integra-a.com-news-id-52e-plus-800x1000-1.png",
+                "_createdOn": 1723588460470,
+                "_id": "e1576e6a-450e-4b75-84f9-ff1418bdc062"
+            }
+
         }
     };
     var rules$1 = {

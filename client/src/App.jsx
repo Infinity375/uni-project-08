@@ -10,6 +10,8 @@ import { AuthContextProvider } from './contexts/AuthContext'
 import ProductCatalog from './components/product-catalog/ProductCatalog'
 import ProductDetails from './components/product-details/ProductDetails'
 import ProductCreate from './components/product-create/ProductCreate'
+import PostBlog from './components/posts/PostsBlog'
+import ProductEdit from './components/product-edit/ProductEdit'
 
 function App() {
   
@@ -25,8 +27,9 @@ function App() {
             <Route path='/logout' element={<Logout />} />
             <Route path='/products' element={<ProductCatalog />} />
             <Route path='/products/:productId/details' element={<ProductDetails />} />
-            {/*<Route path='/games/:gameId/edit' element={<GameEdit />} />*/}
+            <Route path='/products/:productId/edit' element={<ProductEdit />} />
             <Route path='/products/create' element={<ProductCreate />} />
+            <Route path='/posts' element={<PostBlog/>}/>
           </Routes>
         </main>
 
