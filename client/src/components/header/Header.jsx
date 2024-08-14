@@ -5,7 +5,12 @@ export default function Header() {
     const { isAuthenticate } = useAuthContext();
     return (
         <header>
-            <h1><Link className="home" to="/">TopRadio</Link></h1>
+            <div className='header-logo'>
+                <Link className="home" to="/">
+                    <h1>TopRadio</h1>
+                    <h3>Marketplace</h3>
+                </Link>
+            </div>
             <nav>
                 <Link to="/products">All products</Link>
                 <Link to="/posts">Blog</Link>

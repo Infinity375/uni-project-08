@@ -1,24 +1,24 @@
 import { Link } from "react-router-dom";
 
-export default function LatestProducts({
+export default function LatestPosts({
     _id,
     title,
-    price,
+    shortDescription,
     imageUrl
 }) {
 
 
     return (
-        <div className="product-item">
+        <div className="post-item">
             <div className="image-wrap">
                 <img src={imageUrl} />
             </div>
             <h3>{title}</h3>
-            <div className="rating">
-                <h2>{price} €</h2>
-            </div>
+            {/*<div className="description">
+                <h2>{shortDescription}</h2>
+            </div>*/}
             <div className="data-buttons">
-                <Link to={`/products/${_id}/details`} className="btn details-btn">BUY PRODUCT</Link>
+                <Link to={`/products/${_id}/details`} className="btn details-btn">READ MORE</Link>
             </div>
         </div>
     )
