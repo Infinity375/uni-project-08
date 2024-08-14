@@ -28,56 +28,58 @@
     background-color: whitesmoke;
 }
 
-.game-header {
+.product-header {
     position: relative;
-    padding: 25px;
-    height: 40%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.game_header>h1 {
+.product-header h1 {
     color: black;
     margin-top: 5px;
-    font-size: 36px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0 !important;
 }
 
-.game_header>h4 {
+.product-header h2 {
+    padding: 0 !important;
+}
+
+.product-header h4 {
     color: #555;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 400;
+    padding: 0 !important;
+
 }
 
 .levels {
     display: inline-block;
     margin-top: 15px;
-    color: #555;
-    padding: 7px;
-    border-radius: 5px;
-    background-color: #b4b6ee;
-    border: 1px solid rgba(218, 181, 181, 0.829);
+    color: #000000;
+
 }
 
 .type {
     display: inline-block;
     color: #959595;
-    font-size: 19px;
-    margin-left: 10px;
+    font-size: 16px;
+    margin: 10px 0 10px 0 ;
 }
 
 .game-img {
-    position: relative;
-    float: left;
     margin-left: 15px;
     margin-right: 22px;
-    height: 220px;
-    border-radius: 50%;
+    height: 350px;
+    border-radius: 10%;
     box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
 }
 
 .info-section>.text {
-    margin-top: 30px;
-    padding: 60px;
-    height: 50%;
+    padding: 20px;
 }
 
 .game-summary {
@@ -87,8 +89,8 @@
 }
 
 .text {
-    font-size: 25px;
-    color: #545454;
+    font-size: 22px;
+    color: #000000;
 }
 
 .movie_social {
@@ -104,23 +106,24 @@
 }
 
 .buttons {
-    height: 10%;
     text-align: right;
     padding-right: 15px;
     padding-bottom: 40px;
 }
 
 .button {
-    height: 15%;
-    background-color: #54557b;
-    padding: 14px;
+    background-color: #fd5454;
+    border-radius: 10px;
+    border: 2px solid #fd5454;
+    padding: 15px 30px;
     margin-top: auto;
-    font-size: 21px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
+    transition: 300ms ease-in-out;
 }
 
 .button:hover {
-    background-color: #6f5d9c;
-    color: white;
+    background-color: #ffffff;
+    color: #fd5454;
 }
 

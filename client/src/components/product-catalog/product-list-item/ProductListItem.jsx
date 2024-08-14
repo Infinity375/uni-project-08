@@ -19,11 +19,12 @@ export default function ProductListItem(
                 <div className="product">
                     <div className="product-info">
                         <h2>{title}</h2>
+                        <h4>Category: {category}</h4>
                         <p>{shortDescription}</p>
                     </div>
                     <div className="product-image"><img src={imageUrl} /></div>
                 </div>
-                <Link to={`/products/${_id}/details`} className="details-button">See more</Link>
+                <Link to={`/products/${_id}/details`} className="details-button">BUY PRODUCT</Link>
             </div>
         </div>
 

@@ -56,12 +56,14 @@ export default function ProductDetails() {
             <h1>Product Details</h1>
             <div className="info-section">
 
-                <div className="game-header">
+                <div className="product-header">
                     <img className="game-img" src={product.imageUrl} alt={product.title} />
-                    <h1>{product.title}</h1>
-                    <span className="levels">Manufacturer: {product.manufacturer}</span>
-                    <p className="type">{product.category}</p>
-                    <h2>€ {product.price}</h2>
+                    <div>
+                        <h1>{product.title}</h1>
+                        <p className="type">{product.category}</p>
+                        <h2>For 1: € {product.price}</h2>
+                        <span className="levels">Manufacturer: {product.manufacturer}</span>
+                    </div>
                 </div>
 
                 <p className="text">{product.description}</p>

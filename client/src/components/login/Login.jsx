@@ -1,6 +1,6 @@
 import { useForm } from '../../hooks/useForm'
 import { useLogin } from '../../hooks/useAuth'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const initialValues = { email: '', password: '' };
 
@@ -42,7 +42,7 @@ export default function Login() {
                         name="password" />
                     <input type="submit" className="btn submit" value="Login" />
                     <p className="field">
-                        <span>If you don't have profile click <a href="#">here</a></span>
+                        <span>If you don't have profile click <Link to="/register">here</Link></span>
                     </p>
                 </div>
             </form>
