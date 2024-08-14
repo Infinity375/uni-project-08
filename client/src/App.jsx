@@ -5,14 +5,16 @@ import Home from './components/home/Home'
 import Login from './components/login/Login'
 import Register from './components/register/Register'
 import Logout from './components/logout/Logout'
-
-import { AuthContextProvider } from './contexts/AuthContext'
 import ProductCatalog from './components/product-catalog/ProductCatalog'
 import ProductDetails from './components/product-details/ProductDetails'
 import ProductCreate from './components/product-create/ProductCreate'
 import PostBlog from './components/posts/PostsBlog'
 import ProductEdit from './components/product-edit/ProductEdit'
 import PostDetails from './components/post-details/PostDetails'
+import PostCreate from './components/post-create/PostCreate'
+import PostEdit from './components/post-edit/PostEdit'
+
+import { AuthContextProvider } from './contexts/AuthContext'
 
 function App() {
   
@@ -32,6 +34,9 @@ function App() {
             <Route path='/products/create' element={<ProductCreate />} />
             <Route path='/posts' element={<PostBlog/>}/>
             <Route path='/posts/:postId/details' element={<PostDetails />} />
+            <Route path='/posts/create' element={<PostCreate />} />
+            <Route path='/posts/:postId/edit' element={<PostEdit />} />
+
           </Routes>
         </main>
 

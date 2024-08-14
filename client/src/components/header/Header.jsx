@@ -13,6 +13,7 @@ export default function Header() {
                     ? (
                         <div id="user">
                             <Link to="/products/create">Create product</Link>
+                            <Link to="/posts/create">Create post</Link>
                             <Link to="/logout">Logout</Link>
                         </div>
                     )

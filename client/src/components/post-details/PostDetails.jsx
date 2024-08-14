@@ -1,11 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useGetOneProduct } from "../../hooks/useProducts";
-import { AuthContext, useAuthContext } from "../../contexts/AuthContext";
+import { useAuthContext } from "../../contexts/AuthContext";
 import { useCreateProductComment, useGetAllComments } from "../../hooks/useProductComments";
 import { useForm } from "../../hooks/useForm";
 import { Link } from "react-router-dom";
-import productsAPI from "../../api/products-api";
-import { useContext } from "react";
 import { useGetOnePosts } from "../../hooks/usePosts";
 import postsAPI from "../../api/posts-api";
 
@@ -36,7 +33,7 @@ export default function PostDetails() {
 
     const postDeleteHandler = async () => {
         try {
-            const isConfirmed = confirm(`Are you sure you want to delete this ${post.title}?`);
+            const isConfirmed = confirm(`Are you sure you want to delete the ${post.title} post?`);
             if (isConfirmed) {
                 await postsAPI.remove(productId);
                 navigate('/');
